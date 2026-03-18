@@ -89,15 +89,43 @@ document.addEventListener("DOMContentLoaded", function () {
       var info = document.createElement("div");
       info.className = "card-info";
 
+      var nameWrap = document.createElement("div");
+      nameWrap.className = "card-name-wrap";
+
+      if (item.manufacturer) {
+        var mfr = document.createElement("span");
+        mfr.className = "card-manufacturer";
+        mfr.textContent = item.manufacturer;
+        nameWrap.appendChild(mfr);
+      }
+
       var name = document.createElement("span");
       name.className = "card-name";
       name.textContent = item.name;
-      info.appendChild(name);
+      nameWrap.appendChild(name);
+
+      info.appendChild(nameWrap);
+
+      var priceWrap = document.createElement("div");
+      priceWrap.className = "card-price-wrap";
 
       var price = document.createElement("span");
       price.className = "card-price";
       price.textContent = formatPrice(item.price, item.currency || "USD");
-      info.appendChild(price);
+      priceWrap.appendChild(price);
+
+      if (item.link) {
+        var link = document.createElement("a");
+        link.className = "card-link";
+        link.href = item.link;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = "↗";
+        link.title = "View product";
+        priceWrap.appendChild(link);
+      }
+
+      info.appendChild(priceWrap);
 
       card.appendChild(info);
 
