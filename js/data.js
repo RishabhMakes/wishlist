@@ -97,5 +97,27 @@ const wishlistItems = [
     currency: "INR",
     category: "watches",
     owned: false
+  },
+  {
+    id: 10,
+    name: "Made by MSCHF",
+    manufacturer: "Phaidon Press",
+    image: "images/processed/made-by-mschf-book.png",
+    link: "https://ikkadukka.com/products/made-by-mschf-book",
+    price: 8995,
+    currency: "INR",
+    category: "books",
+    owned: false
+  },
+  {
+    id: 11,
+    name: "Cosplaying as a Sysadmin Mug",
+    manufacturer: "Red Shirt Jeff",
+    image: "images/processed/cosplaying-as-a-sysadmin-mug.png",
+    link: "https://www.redshirtjeff.com/shop/p/cosplaying-as-a-sysadmin-mug",
+    price: 12.50,
+    currency: "USD",
+    category: "home",
+    owned: false
   }
 ];
