@@ -1,3 +1,11 @@
+var currencySymbols = { USD: "$", INR: "₹", EUR: "€", JPY: "¥" };
+
+function formatPrice(price, currency) {
+  var symbol = currencySymbols[currency] || currency + " ";
+  var decimals = currency === "JPY" ? 0 : 2;
+  return symbol + price.toFixed(decimals);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   var statusFilter = "all";
   var categoryFilter = "all";
@@ -88,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       var price = document.createElement("span");
       price.className = "card-price";
-      price.textContent = "$" + item.price.toFixed(2);
+      price.textContent = formatPrice(item.price, item.currency || "USD");
       info.appendChild(price);
 
       card.appendChild(info);
