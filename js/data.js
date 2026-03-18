@@ -119,5 +119,16 @@ const wishlistItems = [
     currency: "USD",
     category: "home",
     owned: false
+  },
+  {
+    id: 12,
+    name: "The Project Qaafi Hand Cream",
+    manufacturer: "Project Qaafi",
+    image: "images/processed/project-qaafi-hand-cream.png",
+    link: "https://projectqaafi.com/products/the-project-qaafi-hand-cream-1",
+    price: 1595.00,
+    currency: "INR",
+    category: "beauty",
+    owned: false
   }
 ];
