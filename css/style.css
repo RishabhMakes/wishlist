@@ -127,21 +127,59 @@ main {
 .card-info {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-end;
   padding: 12px 14px;
+  gap: 8px;
+}
+
+.card-name-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.card-manufacturer {
+  font-size: 0.72rem;
+  color: #bbb;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-name {
   font-size: 0.85rem;
   font-weight: 500;
   color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-price-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
 }
 
 .card-price {
   font-size: 0.8rem;
   color: #999;
   white-space: nowrap;
-  margin-left: 12px;
+}
+
+.card-link {
+  font-size: 0.78rem;
+  color: #ccc;
+  text-decoration: none;
+  line-height: 1;
+  transition: color 0.15s ease;
+}
+
+.card-link:hover {
+  color: #333;
 }
 
 /* Owned badge */
