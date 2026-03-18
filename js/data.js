@@ -97,5 +97,27 @@ const wishlistItems = [
     currency: "INR",
     category: "watches",
     owned: false
+  },
+  {
+    id: 10,
+    name: "Sabr",
+    manufacturer: "Kalakaari Haath",
+    image: "images/processed/sabr.png",
+    link: "https://www.kalakaarihaath.com/products/sabr",
+    price: 14000,
+    currency: "INR",
+    category: "home",
+    owned: false
+  },
+  {
+    id: 11,
+    name: "Eyewear Stand",
+    manufacturer: "Craighill",
+    image: "images/processed/eyewear-stand.png",
+    link: "https://craighill.co/products/eyewear-stand",
+    price: 68.00,
+    currency: "USD",
+    category: "home",
+    owned: false
   }
 ];
