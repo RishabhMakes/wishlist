@@ -66,6 +66,17 @@ const wishlistItems = [
     owned: false
   },
   {
+    id: 8,
+    name: "Maintenance: Of Everything, Part One",
+    manufacturer: "Stewart Brand",
+    image: "images/processed/maintenance-of-everything-part-one.png",
+    link: "https://www.amazon.in/Maintenance-Everything-Part-Stewart-Brand/dp/1953953492",
+    price: 40.00,
+    currency: "USD",
+    category: "books",
+    owned: false
+  },
+  {
     id: 7,
     name: "Tank Must SolarBeat™",
     manufacturer: "Cartier",
