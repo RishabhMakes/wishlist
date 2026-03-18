@@ -121,6 +121,17 @@ const wishlistItems = [
     owned: false
   },
   {
+    id: 14,
+    name: "Santeiko White",
+    manufacturer: "Santeiko",
+    image: "images/processed/santeiko-white.png",
+    link: "https://www.culture-circle.com/products/all/santeiko-white",
+    price: 22534,
+    currency: "INR",
+    category: "watches",
+    owned: false
+  },
+  {
     id: 13,
     name: "Seiko Mod Santos Fuck 9-5",
     manufacturer: "Seiko",
