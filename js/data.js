@@ -69,7 +69,7 @@ const wishlistItems = [
     id: 7,
     name: "Tank Must SolarBeat™",
     manufacturer: "Cartier",
-    image: "images/cartier-tank-must-solarbeat.svg",
+    image: "images/cartier-tank-must-solarbeat.png",
     link: "https://www.cartier.com/en-in/watches/collections/tank/tank-must-solarbeat%E2%84%A2-watch-CRWSTA0120.html",
     price: 392000,
     currency: "INR",
