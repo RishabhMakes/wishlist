@@ -119,5 +119,71 @@ const wishlistItems = [
     currency: "USD",
     category: "home",
     owned: false
+  },
+  {
+    id: 12,
+    name: "Sabr",
+    manufacturer: "Kalakaari Haath",
+    image: "images/processed/sabr.png",
+    link: "https://www.kalakaarihaath.com/products/sabr",
+    price: 14000,
+    currency: "INR",
+    category: "home",
+    owned: false
+  },
+  {
+    id: 13,
+    name: "Eyewear Stand",
+    manufacturer: "Craighill",
+    image: "images/processed/eyewear-stand.png",
+    link: "https://craighill.co/products/eyewear-stand",
+    price: 68.00,
+    currency: "USD",
+    category: "home",
+    owned: false
+  },
+  {
+    id: 14,
+    name: "The Project Qaafi Hand Cream",
+    manufacturer: "Project Qaafi",
+    image: "images/processed/project-qaafi-hand-cream.png",
+    link: "https://projectqaafi.com/products/the-project-qaafi-hand-cream-1",
+    price: 1595.00,
+    currency: "INR",
+    category: "beauty",
+    owned: false
+  },
+  {
+    id: 15,
+    name: "Seiko Mod Santos Fuck 9-5",
+    manufacturer: "Seiko",
+    image: "images/processed/seiko-mod-santos-fuck-9-5.png",
+    link: "https://www.culture-circle.com/products/all/seiko-mod-santos-fuck-9-5",
+    price: 16758,
+    currency: "INR",
+    category: "watches",
+    owned: false
+  },
+  {
+    id: 16,
+    name: "Santeiko White",
+    manufacturer: "Santeiko",
+    image: "images/processed/santeiko-white.png",
+    link: "https://www.culture-circle.com/products/all/santeiko-white",
+    price: 22534,
+    currency: "INR",
+    category: "watches",
+    owned: false
+  },
+  {
+    id: 17,
+    name: "Even G2 Smart Glasses",
+    manufacturer: "Even Realities",
+    image: "images/processed/even-g2.png",
+    link: "https://www.evenrealities.com/smart-glasses",
+    price: 599.00,
+    currency: "USD",
+    category: "electronics",
+    owned: false
   }
 ];
