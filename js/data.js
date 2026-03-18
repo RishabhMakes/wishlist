@@ -2,7 +2,7 @@ const wishlistItems = [
   {
     id: 1,
     name: "Sony WH-1000XM5",
-    image: "https://picsum.photos/seed/headphones/400/300",
+    image: "images/headphones.svg",
     price: 349.99,
     currency: "USD",
     category: "electronics",
@@ -11,7 +11,7 @@ const wishlistItems = [
   {
     id: 2,
     name: "Aeropress Coffee Maker",
-    image: "https://picsum.photos/seed/aeropress/400/300",
+    image: "images/aeropress.svg",
     price: 39.95,
     currency: "USD",
     category: "kitchen",
@@ -20,7 +20,7 @@ const wishlistItems = [
   {
     id: 3,
     name: "Kindle Paperwhite",
-    image: "https://picsum.photos/seed/kindle/400/300",
+    image: "images/kindle.svg",
     price: 149.99,
     currency: "USD",
     category: "electronics",
@@ -29,7 +29,7 @@ const wishlistItems = [
   {
     id: 4,
     name: "Cast Iron Skillet",
-    image: "https://picsum.photos/seed/skillet/400/300",
+    image: "images/skillet.svg",
     price: 44.90,
     currency: "USD",
     category: "kitchen",
@@ -38,7 +38,7 @@ const wishlistItems = [
   {
     id: 5,
     name: "Running Shoes",
-    image: "https://picsum.photos/seed/shoes/400/300",
+    image: "images/shoes.svg",
     price: 129.00,
     currency: "USD",
     category: "fitness",
@@ -47,7 +47,7 @@ const wishlistItems = [
   {
     id: 6,
     name: "Resistance Bands Set",
-    image: "https://picsum.photos/seed/bands/400/300",
+    image: "images/bands.svg",
     price: 24.99,
     currency: "USD",
     category: "fitness",
