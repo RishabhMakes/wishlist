@@ -77,6 +77,17 @@ const wishlistItems = [
     owned: false
   },
   {
+    id: 9,
+    name: "Flare 40",
+    manufacturer: "Douze Degrés",
+    image: "images/processed/flare-40.png",
+    link: "https://studiodouzedegres.com/flare-40-mobile-2",
+    price: 390.00,
+    currency: "EUR",
+    category: "home",
+    owned: false
+  },
+  {
     id: 7,
     name: "Tank Must SolarBeat™",
     manufacturer: "Cartier",
