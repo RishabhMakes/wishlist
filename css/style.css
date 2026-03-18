@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.5;
+}
+
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: #222;
+  margin-bottom: 24px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.separator {
+  width: 1px;
+  height: 20px;
+  background: #ddd;
+  margin: 0 8px;
+}
+
+.filter-btn {
+  background: #f5f5f5;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.filter-btn:hover {
+  background: #eee;
+  color: #333;
+}
+
+.filter-btn.active {
+  background: #222;
+  color: #fff;
+}
+
+/* Grid */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, opacity 0.2s ease;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card.owned {
+  opacity: 0.5;
+}
+
+.card.owned:hover {
+  opacity: 0.75;
+}
+
+.card-image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 12px 14px;
+}
+
+.card-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.card-price {
+  font-size: 0.8rem;
+  color: #999;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+/* Owned badge */
+.owned-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(232, 245, 233, 0.92);
+  color: #2e7d32;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Empty state */
+.empty-msg {
+  display: none;
+  text-align: center;
+  color: #bbb;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+
+.empty-msg.visible {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  header {
+    padding: 28px 16px 0;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+  }
+
+  main {
+    padding: 24px 16px 40px;
+  }
+
+  .grid {
+    gap: 18px;
+  }
+
+  .separator {
+    display: none;
+  }
+}
