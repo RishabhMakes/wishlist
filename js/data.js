@@ -88,6 +88,17 @@ const wishlistItems = [
     owned: false
   },
   {
+    id: 10,
+    name: "Eyewear Stand",
+    manufacturer: "Craighill",
+    image: "images/processed/craighill-eyewear-stand.png",
+    link: "https://craighill.co/products/eyewear-stand",
+    price: 68.00,
+    currency: "USD",
+    category: "home",
+    owned: false
+  },
+  {
     id: 7,
     name: "Tank Must SolarBeat™",
     manufacturer: "Cartier",
