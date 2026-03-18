@@ -23,25 +23,24 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Cache rembg model
+        uses: actions/cache@v4
+        with:
+          path: ~/.u2net
+          key: rembg-u2net-model
+
       - name: Install dependencies
-        run: pip install requests Pillow
+        run: pip install "rembg[cpu]" Pillow
 
       - name: Process new images
         id: process
-        env:
-          HF_API_TOKEN: ${{ secrets.HF_API_TOKEN }}
         run: |
           python - <<'EOF'
-          import os
-          import time
-          import requests
           import json
+          import os
           from pathlib import Path
 
-          HF_API_URL = "https://api-inference.huggingface.co/models/briaai/RMBG-1.4"
-          HF_TOKEN = os.environ["HF_API_TOKEN"]
-          HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
-          MAX_RETRIES = 3
+          from rembg import remove
 
           raw_dir = Path("images/raw")
           processed_dir = Path("images/processed")
@@ -51,35 +50,6 @@ jobs:
 
           failed = []
           processed = []
-
-          def call_hf_api(image_bytes, slug):
-              for attempt in range(1, MAX_RETRIES + 1):
-                  print(f"  Attempt {attempt}/{MAX_RETRIES}...")
-                  response = requests.post(
-                      HF_API_URL,
-                      headers={**HEADERS, "Content-Type": "application/octet-stream"},
-                      data=image_bytes,
-                      timeout=120,
-                  )
-
-                  if response.status_code == 200:
-                      return response.content
-
-                  if response.status_code == 503:
-                      try:
-                          error_data = response.json()
-                          wait_time = float(error_data.get("estimated_time", 30))
-                      except Exception:
-                          wait_time = 30
-                      print(f"  Model loading, waiting {wait_time:.0f}s...")
-                      time.sleep(wait_time)
-                      continue
-
-                  # Any other error — log and break
-                  print(f"  Error {response.status_code}: {response.text[:200]}")
-                  return None
-
-              return None
 
           for raw_file in sorted(raw_dir.iterdir()):
               if raw_file.suffix.lower() not in SUPPORTED_EXTENSIONS:
@@ -93,16 +63,14 @@ jobs:
                   continue
 
               print(f"Processing {raw_file.name}...")
-              image_bytes = raw_file.read_bytes()
-              result = call_hf_api(image_bytes, slug)
-
-              if result:
+              try:
+                  result = remove(raw_file.read_bytes())
                   output_path.write_bytes(result)
                   processed.append(slug)
                   print(f"  Saved to {output_path}")
-              else:
+              except Exception as e:
                   failed.append(slug)
-                  print(f"  FAILED after {MAX_RETRIES} attempts")
+                  print(f"  FAILED: {e}")
 
           # Write outputs for subsequent steps
           with open(os.environ["GITHUB_OUTPUT"], "a") as f:
@@ -138,12 +106,11 @@ jobs:
                 repo: context.repo.repo,
                 title: `[bg-removal] Failed to process images/raw/${slug}`,
                 body: [
-                  `The background removal Action failed to process \`images/raw/${slug}\` after 3 retries.`,
+                  `The background removal Action failed to process \`images/raw/${slug}\`.`,
                   ``,
                   `**What to check:**`,
-                  `- Is \`HF_API_TOKEN\` set correctly in repository secrets?`,
                   `- Is the file a supported format (.jpg, .jpeg, .png, .webp)?`,
-                  `- Is the Hugging Face API status healthy? https://status.huggingface.co`,
+                  `- Check the failed Action run logs for the specific error.`,
                   ``,
                   `**To retry:** Delete \`images/processed/${slug}.png\` if it exists, then push any change to trigger the Action again.`,
                   ``,
