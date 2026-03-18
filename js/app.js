@@ -2,6 +2,18 @@ var currencySymbols = { USD: "$", INR: "₹", EUR: "€", JPY: "¥" };
 
 function formatPrice(price, currency) {
   var symbol = currencySymbols[currency] || currency + " ";
+
+  var thresholds = currency === "INR"
+    ? [{ d: 1e7, s: "Cr" }, { d: 1e5, s: "L" }, { d: 1e3, s: "K" }]
+    : [{ d: 1e9, s: "B" }, { d: 1e6, s: "M" }, { d: 1e3, s: "K" }];
+
+  for (var i = 0; i < thresholds.length; i++) {
+    if (price >= thresholds[i].d) {
+      var val = (price / thresholds[i].d).toFixed(1).replace(/\.0$/, "");
+      return symbol + val + thresholds[i].s;
+    }
+  }
+
   var decimals = currency === "JPY" ? 0 : 2;
   return symbol + price.toFixed(decimals);
 }
