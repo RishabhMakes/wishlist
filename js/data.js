@@ -121,6 +121,17 @@ const wishlistItems = [
     owned: false
   },
   {
+    id: 13,
+    name: "Seiko Mod Santos Fuck 9-5",
+    manufacturer: "Seiko",
+    image: "images/processed/seiko-mod-santos-fuck-9-5.png",
+    link: "https://www.culture-circle.com/products/all/seiko-mod-santos-fuck-9-5",
+    price: 16758,
+    currency: "INR",
+    category: "watches",
+    owned: false
+  },
+  {
     id: 12,
     name: "The Project Qaafi Hand Cream",
     manufacturer: "Project Qaafi",
