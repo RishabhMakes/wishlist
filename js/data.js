@@ -121,6 +121,17 @@ const wishlistItems = [
     owned: false
   },
   {
+    id: 15,
+    name: "Even G2 Smart Glasses",
+    manufacturer: "Even Realities",
+    image: "images/processed/even-g2.png",
+    link: "https://www.evenrealities.com/smart-glasses",
+    price: 599.00,
+    currency: "USD",
+    category: "electronics",
+    owned: false
+  },
+  {
     id: 14,
     name: "Santeiko White",
     manufacturer: "Santeiko",
