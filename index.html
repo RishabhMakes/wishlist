@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Wishlist</h1>
+    <div class="filters" id="filters">
+      <div class="filter-group" id="status-filters">
+        <button class="filter-btn active" data-filter="status" data-value="all">All</button>
+        <button class="filter-btn" data-filter="status" data-value="wanted">Wanted</button>
+        <button class="filter-btn" data-filter="status" data-value="owned">Owned</button>
+      </div>
+      <span class="separator"></span>
+      <div class="filter-group" id="category-filters"></div>
+    </div>
+  </header>
+  <main>
+    <div class="grid" id="item-grid"></div>
+    <p class="empty-msg" id="empty-msg">No items match the current filters.</p>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
