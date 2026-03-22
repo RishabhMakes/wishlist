@@ -207,5 +207,16 @@ const wishlistItems = [
     currency: "USD",
     category: "home",
     owned: false
+  },
+  {
+    id: 20,
+    name: "KINA Ottoman",
+    manufacturer: "CondeHouse",
+    image: "images/processed/kina-ottoman.png",
+    link: "https://www.condehouse.com/series/kina/",
+    price: 4560.00,
+    currency: "USD",
+    category: "home",
+    owned: false
   }
 ];
