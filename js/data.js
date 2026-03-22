@@ -185,5 +185,38 @@ const wishlistItems = [
     currency: "USD",
     category: "electronics",
     owned: false
+  },
+  {
+    id: 18,
+    name: "Casio MTP-B185D-1AV",
+    manufacturer: "Casio",
+    image: "images/processed/casio-mtp-b185d-1av.png",
+    link: "https://www.casio.com/in/watches/casio/product.MTP-B185D-1AV/",
+    price: 5995,
+    currency: "INR",
+    category: "watches",
+    owned: false
+  },
+  {
+    id: 19,
+    name: "H103-TD Transparent Door Universal Cart Atlas",
+    manufacturer: "Elements Eden",
+    image: "images/processed/h103-td-universal-cart-atlas.png",
+    link: "https://elementseden.com/h103-td-transparent-door-the-universal-cart-h-s-atlas/",
+    price: 900.00,
+    currency: "USD",
+    category: "home",
+    owned: false
+  },
+  {
+    id: 20,
+    name: "KINA Ottoman",
+    manufacturer: "CondeHouse",
+    image: "images/processed/kina-ottoman.png",
+    link: "https://www.condehouse.com/series/kina/",
+    price: 4560.00,
+    currency: "USD",
+    category: "home",
+    owned: false
   }
 ];
